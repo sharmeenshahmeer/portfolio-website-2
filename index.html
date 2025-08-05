@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --primary: #1e3a8a;
+      --secondary: #f97316;
+      --card: rgba(255, 255, 255, 0.05);
+      --glass: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.2);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e1e1e, var(--bg));
+      color: var(--text);
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.8;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: var(--card);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .header img {
+      width: 140px;
+      height: 140px;
+      border-radius: 10%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .title-text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .title-text h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+      color: #f8fafc;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dashed #444;
+      margin: 2rem 0;
+    }
+
+    h2,
+    h3 {
+      color: var(--secondary);
+      margin-top: 2rem;
+    }
+
+    .section,
+    form {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    a {
+      color: var(--secondary);
+    }
+
+    a:hover {
+      color: var(--primary);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1rem;
+    }
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    tr:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      background: var(--glass);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: var(--primary);
+    }
+
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+
+    .about-me {
+      margin-bottom: 2rem;
+    }
+    span {
+      color: var(--secondary);
+    }
+    .footer {
+      text-align: center;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="title-text">
+        <h1>Sharmeen Shahmeer</h1>
+        <h2>Frontend Web Developer</h2>
+      </div>
+      <img src="my photo.png" alt="profile photo" />
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="#Education">Education</a>
+    <a href="#Skills">Skills</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Contacts">Contacts</a>
+    <a href="#form">Send a message</a>
+  </nav>
+
+  <main>
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>
+        Hi, I am Sharmeen. An enthusiastic <span><b>web development</b></span> student with a passion for bringing designs to life
+        through code.
+        I enjoy building basic websites and exploring how the web works behind the scenes. I am currently focused on
+        frontend development and aim to contribute to meaningful, real-world projects.
+      </p>
+    </div>
+
+    <section id="Education" class="section">
+      <h3>Education :</h3>
+      <table>
+        <tr>
+          <th>Degree</th>
+          <th>Institute</th>
+          <th>Passing Year</th>
+        </tr>
+        <tr>
+          <td>Matric</td>
+          <td>Dua High School</td>
+          <td>2021</td>
+        </tr>
+        <tr>
+          <td>Intermediate</td>
+          <td>Bahria College</td>
+          <td>2023</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="Skills" class="section">
+      <h3>Skills :</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="Projects" class="section">
+      <h3>Projects :</h3>
+      <ol>
+        <li>Simple Calculator</li>
+        <li>Portfolio Website</li>
+        <li>Bookmark Manager</li>
+        <li>Recipe Page</li>
+      </ol>
+    </section>
+
+    <section id="Contacts" class="section">
+      <h3>Contacts :</h3>
+      <p>
+        Email: <a href="mailto:sharmeenshahmeer@gmail.com">sharmeenshahmeer@gmail.com</a><br />
+        GitHub: <a href="https://github.com/sharmeenshahmeer" target="_blank">github.com/sharmeenshahmeer</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/in/sharmeen-shahmeer-b827ba374/"
+          target="_blank">linkedin.com/in/sharmeenshahmeer</a>
+      </p>
+    </section>
+
+    <section id="form">
+      <form>
+        <h3>Send a Message </h3>
+        <p><label>Name: <input type="text" name="name" required /></label></p>
+        <p><label>Email: <input type="email" name="email" required /></label></p>
+        <p>
+          <label>Message: <br />
+            <textarea name="message" rows="4" cols="30" required></textarea>
+          </label>
+        </p>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+  <p>&copy; 2025 Sharmeen Shahmeer. All rights reserved.</p>
+ </footer>
+</body>
+
+</html>
